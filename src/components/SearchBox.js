@@ -1,7 +1,8 @@
 import React from "react";
-import './searchbox.css';
+import "./searchbox.css";
 
 export default class SearchBox extends React.Component {
+
   render() {
     return (
       <div className="container h-100 mb-5">
@@ -12,6 +13,7 @@ export default class SearchBox extends React.Component {
               type="text"
               name=""
               placeholder="Search..."
+              onChange = {this.props.handleInput}
             />
             <a href="#" className="search_icon">
               <i className="fas fa-search"></i>

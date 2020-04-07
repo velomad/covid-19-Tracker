@@ -1,0 +1,10 @@
+.patient-block {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(21, 8, 24);
+    opacity: 0.4;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}

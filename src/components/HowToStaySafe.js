@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Banner from './Banner';
 const HowToStaySafe = () => {
     return(
         <div>
-            stay safe component
+            <Banner/>
         </div>
     )
 }

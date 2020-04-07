@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-export default class SummaryTable extends React.Component {
-
-
-    render(){
-        return(
-<table className="table table-striped">
+export default class CountryTable extends React.Component {
+  
+  render() {
+    return (
+      <div>
+      <table className="table table-striped">
         <thead>
           <tr>
             <th scope="col">Country</th>
@@ -15,14 +15,20 @@ export default class SummaryTable extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">India</th>
-            <td>52</td>
-            <td>23</td>
-            <td>2</td>
-          </tr>
+          {this.props.filterCovidData.map((item, index) => (
+            <tr key={index} onClick={this.handleCountryClick} style={{}}>
+              <th className="countryName" refs="hello" scope="row">{item.Country}</th>
+              <td>{item.TotalConfirmed}</td>
+              <td>{item.TotalRecovered}</td>
+              <td>{item.TotalDeaths}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
-        );
-    }
+      {/* <button className="btn btn-info" onClick={this.props.showMore}>
+        more
+      </button> */}
+      </div>
+    );
+  }
 }
