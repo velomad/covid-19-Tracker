@@ -6,8 +6,8 @@ import HowToStaySafe from './HowToStaySafe';
 import About from './About';
 import PatientsData from './PatientsData';
 
-
 export default class App extends React.Component {
+
   render() {
     return (
         <BrowserRouter>

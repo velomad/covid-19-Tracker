@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="home" style={{ overflowX: "hidden" }}>
-      {console.log(statsData)}
+      {/* {console.log(statsData)} */}
       <Banner />
       <div className="row ml-3">
         <TimeUpdated updatedAt={updatedAt} />

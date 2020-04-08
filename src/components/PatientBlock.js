@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./patientblock.css";
 import Overlay from "react-bootstrap/Overlay";
-import { Popover, OverlayTrigger, Button } from "react-bootstrap";
+import { Popover, OverlayTrigger } from "react-bootstrap";
 import  './shadowhover.css';
 
 const PatientBlock = (props) => {
@@ -97,7 +97,7 @@ const PatientBlock = (props) => {
                 // onClick={() => fetchPatientData(index)}
                 key={index}
                 style={{ backgroundColor: "red" }}
-                className="patient-block mr-4 mt-4 zoom"
+                className="patient-block mr-4 mt-4 box"
               >
                 <p className="zoom" style={{ color: "white" }}>{item.patientnumber ? item.patientnumber : '---'}</p>
               </div>
@@ -152,7 +152,7 @@ const PatientBlock = (props) => {
                 <p style={{ color: "white" }}>{item.patientnumber ? item.patientnumber : '---'}</p>
               </div>
             </OverlayTrigger>
-          )
+          ) 
         )}
       </div>
       <div className="container mt-5 " style={{ textAlign: "center" }}>
