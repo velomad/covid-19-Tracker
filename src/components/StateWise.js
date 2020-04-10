@@ -4,7 +4,7 @@ import StateWiseContainer from "./StateWiseContainer";
 const StateWise = (props) => {
   // console.log(props)
   return (
-    <div className=" ml-4 row">
+    <div className=" ml-1 row">
       {props.stateWise.map((state, index) => {
         return (
           <StateWiseContainer key={index} stateInfo = {state}/>

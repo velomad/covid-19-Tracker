@@ -29,7 +29,7 @@ const Home = () => {
       <div className="row ml-3">
         <TimeUpdated updatedAt={updatedAt} />
       </div>
-      <Stats statsData={statsData} />
+      <Stats statsData={statsData}/>
       {/* <MiniChart /> */}
       <StateWise stateWise = {stateWise}/>
     </div>

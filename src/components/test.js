@@ -1804,8 +1804,25 @@ data.map((item) => {
     }
   });
 
+  const testArry = [1,2,5,4,7,8,6,2,5,4,1,2,5,5,2,1,4,85,5,8,7,5,5,6]
 
-console.log('Female - ' +female.length)
-console.log('Male - ' +male.length)
-console.log('Unknown - ' +unknown.length)
+  for (var i = 0; i <= testArry.length; i++) {
+    if(i%5 == 0){
+      console.log(testArry[i])
+    }
+  }
+  
 
+// console.log('Female - ' +female.length)
+// console.log('Male - ' +male.length)
+// console.log('Unknown - ' +unknown.length)
+
+
+
+var confirmed = [];
+var recovered = [];
+var deaths = [];
+
+confirmed = props.stateInfo.confirmed;
+recovered = props.stateInfo.recovered;
+deaths = props.stateInfo.deaths;

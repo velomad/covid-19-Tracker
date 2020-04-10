@@ -16,8 +16,8 @@ const Stats = (props) => {
   }, []);
 
   return (
-    <div className="stats row d-flex justify-content-around">
-      <div className="data-block mr-5">
+    <div className="stats row d-flex justify-content-around mt-5">
+      <div className="data-block mr-5 ">
         <p className="text-danger" style={{ fontWeight: 700 }}>
           CONFIRMED
         </p>

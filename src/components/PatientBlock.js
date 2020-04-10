@@ -1,30 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./patientblock.css";
-import Overlay from "react-bootstrap/Overlay";
 import { Popover, OverlayTrigger } from "react-bootstrap";
-import  './shadowhover.css';
+import "./shadowhover.css";
 
 const PatientBlock = (props) => {
   const [limit, setLimit] = useState(27);
   const [isShowMore, setIsShowMore] = useState(false);
 
-  // const displayShowModal = (val) => {
-  //   setShowModal(true);
-  //   const loooper = trialData[val];
-  //   console.log(Object.values(loooper));
-  //   alert(Object.values(loooper));
-  // };
-
-  // const fetchPatientData = (value) => {
-
-  //   var data = props.popoverData[value]
-  //   console.log(data.gender)
-
-  // };
-
   const handleShowMore = () => {
     setIsShowMore(true);
-    setLimit(limit + 27)
+    setLimit(limit + 27);
   };
 
   return (
@@ -45,8 +30,20 @@ const PatientBlock = (props) => {
           className="patient-block ml-2 row"
           style={{ height: 30, width: 80, backgroundColor: "red" }}
         ></div>
-      </div>
 
+        <div className="text-center mt-5">
+          <p style={{ color: "#6b5b95" }}>
+            It is important that we do not think of these as just tiny boxes,
+            numbers, or just another part of statistics - among these are our
+            neighbors, our teachers, our healthcare workers, our supermarket
+            vendors, our friends, our co-workers, our children or our
+            grandparents. Among these are our people.
+          </p>
+        </div>
+
+        <div>
+        </div>
+      </div>
 
       <div className="mt-5 row">
         {props.patientData.slice(0, limit).map((item, index) =>
@@ -99,7 +96,9 @@ const PatientBlock = (props) => {
                 style={{ backgroundColor: "red" }}
                 className="patient-block mr-4 mt-4 box"
               >
-                <p className="zoom" style={{ color: "white" }}>{item.patientnumber ? item.patientnumber : '---'}</p>
+                <p className="zoom" style={{ color: "white" }}>
+                  {item.patientnumber ? item.patientnumber : "---"}
+                </p>
               </div>
             </OverlayTrigger>
           ) : (
@@ -149,15 +148,17 @@ const PatientBlock = (props) => {
                 key={index}
                 className="patient-block mr-4 mt-4 box"
               >
-                <p style={{ color: "white" }}>{item.patientnumber ? item.patientnumber : '---'}</p>
+                <p style={{ color: "white" }}>
+                  {item.patientnumber ? item.patientnumber : "---"}
+                </p>
               </div>
             </OverlayTrigger>
-          ) 
+          )
         )}
       </div>
       <div className="container mt-5 " style={{ textAlign: "center" }}>
         <button onClick={handleShowMore} className="btn btn-primary">
-          {isShowMore === false ? "Show More" : 'Show More 27 +'}
+          {isShowMore === false ? "Show More" : "Show More 27 +"}
         </button>
       </div>
     </div>
